@@ -8,7 +8,7 @@ var auth = require('./auth');
 function requireAuth(nextState, replace) {
     if (!auth.loggedIn()) {
         replace({
-            pathname: '/app/login',
+            pathname: '/app/login/',
             state: {nextPathname: '/app/'}
         });
     }

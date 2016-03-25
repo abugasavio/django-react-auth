@@ -22,7 +22,7 @@ routes = getattr(settings, 'REACT_ROUTES', [])
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    #url(r'^app/', csrf_exempt(TemplateView.as_view(template_name='index.html'))),
-    url(r'^app/(%s)/$' % '|'.join(routes), csrf_exempt(TemplateView.as_view(template_name='index.html'))),
+    url(r'^app/', csrf_exempt(TemplateView.as_view(template_name='index.html'))),
+    #url(r'^app/(%s)/$' % '|'.join(routes), csrf_exempt(TemplateView.as_view(template_name='index.html'))),
     url(r'^api/', include('api.urls'))
 ]
